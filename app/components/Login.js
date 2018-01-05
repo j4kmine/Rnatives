@@ -12,7 +12,10 @@ import {
   Input,
   Content,
   Toast,
-  Icon
+  Icon,
+  H1,
+  H2,
+  H3
 } from "native-base";
 import {diffDate} from '../helpers/Helpers';
 var SQLite = require('react-native-sqlite-storage')
@@ -129,24 +132,28 @@ export default class Login extends Component{
   }
   render(){
     return (
-      <Container>
-        <Content style={{ paddingLeft: 15 , paddingRight: 15  }}>
+      <Container style={{ backgroundColor:'#FEE469',flex: 1}}>
+
+        <Content style={{ paddingLeft: 15 ,paddingTop: 100,  paddingRight: 15  }}>
+         <Icon active name='eye' style={{ textAlign:'center',fontWeight: 'bold'}} />
+         <H2 style={{ textAlign:'center',fontWeight: 'bold'}}>PLEASE SIGN IN</H2>
           <Item floatingLabel>
-                  <Label>Email</Label>
-                    <Input onChangeText={(text)=>{
+                    <Icon active name='person' />
+                    <Input placeholder='UserName' onChangeText={(text)=>{
                       this.setState({email:text}); 
                       this._checkisValid();
                   }} />
                 </Item>
                 <Item floatingLabel>
-                  <Label>Password</Label>
-                    <Input secureTextEntry={true} onChangeText={(text)=>{
+                  <Icon active name='eye' />
+                    <Input placeholder='Password'secureTextEntry={true} onChangeText={(text)=>{
                       this.setState({password:text}); 
                       this._checkisValid();
                   }} />
                 </Item>
               {this.renderButtons()}
         </Content>
+      
       </Container>
     );
   }

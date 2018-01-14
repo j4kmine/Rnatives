@@ -17,7 +17,7 @@
  *
  * See csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf
  */
- import Aes from './Aes';
+import Aes from './Aes';
 export default class AesCtr extends Aes {
 
     /**

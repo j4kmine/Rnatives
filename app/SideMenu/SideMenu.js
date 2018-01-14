@@ -148,7 +148,18 @@ class SideMenu extends Component {
               <Icon name='cog' style={{ paddingLeft: 10  }} />
                <Text style={{ paddingLeft: 10  }}  onPress={()=>this.Alerts()}>Sign Out</Text>
             </ListItem>
-           
+           <ListItem style={{ marginLeft: 0 }}>
+               <Text  style={{ paddingLeft: 10  }} onPress={this.navigateToScreen('Manual',this.state)}>Ekspansi Rcon</Text>
+            </ListItem>
+             <ListItem style={{ marginLeft: 0 }}>
+               <Text  style={{ paddingLeft: 10  }} onPress={this.navigateToScreen('Ekspansi',this.state)}>Ekspansi</Text>
+            </ListItem>
+             <ListItem style={{ marginLeft: 0 }}>
+               <Text  style={{ paddingLeft: 10  }} onPress={this.navigateToScreen('Sbox',this.state)}>Sbox</Text>
+            </ListItem>
+             <ListItem style={{ marginLeft: 0 }}>
+               <Text  style={{ paddingLeft: 10  }} onPress={this.navigateToScreen('Mixcolumn',this.state)}>Mixcolumn</Text>
+            </ListItem>
           </List>
           
         </Content>

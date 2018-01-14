@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { View,  FlatList, ActivityIndicator } from "react-native";
 import {diffDate} from '../helpers/Helpers';
 import AesCtr from '../Lib/AesCtr';
-import {List,H1,Thumbnail,Form,Picker, Container, Header, Title, Button, Left, Right, Body, Icon,Card,CardItem,Text,Item,Input,Content,Spinner } from 'native-base';
+import {List,H1,H2,H3,Thumbnail,Form,Picker, Container, Header, Title, Button, Left, Right, Body, Icon,Card,CardItem,Text,Item,Input,Content,Spinner } from 'native-base';
 var SQLite = require('react-native-sqlite-storage')
 var db =SQLite.openDatabase({name : "testDB"})
 class Sales extends Component {
@@ -231,15 +231,15 @@ class Sales extends Component {
                           <CardItem>
                             <Body>
                               
-                              <H1>
-                                Rp. {AesCtr.decrypt(item.HOPTFIELD5,this.state.access_token,256)}
-                              </H1>
+                              <H3>
+                                Tagihan : Rp. {AesCtr.decrypt(item.HOPTFIELD5,this.state.access_token,256)}
+                              </H3>
                             </Body>
                           </CardItem>
                           <CardItem>
                             <Left>
                               <Button transparent textStyle={{color: '#87838B'}}>
-                                <Icon name="logo-github" />
+                                <Icon name="person" />
                                 <Text>{ AesCtr.decrypt(item.PIC_CD,this.state.access_token,256)}</Text>
                               </Button>
                             </Left>
